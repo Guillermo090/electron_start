@@ -1,0 +1,22 @@
+{
+  "name": "app01_marcadores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guillermo090/electron_start.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guillermo090/electron_start/issues"
+  },
+  "homepage": "https://github.com/Guillermo090/electron_start#readme",
+  "devDependencies": {
+    "electron": "^27.1.0"
+  }
+}
