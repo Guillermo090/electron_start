@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Guillermo090/electron_start#readme",
   "devDependencies": {
     "electron": "^27.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
   }
 }

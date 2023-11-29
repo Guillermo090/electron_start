@@ -1,4 +1,6 @@
 const { shell } = require('electron');
+// const {bootstrap} = require('bootstrap');
+
 class Marcadores{
     constructor() {
         this.mensajeError = document.querySelector('#mensaje-error');
@@ -59,23 +61,25 @@ class Marcadores{
     }
 
     generarHtmlMarcador(marcador){
-        return `<div class="enlace"><h3>${marcador.titulo}</h3>
-        <p><a href="${marcador.url}">${marcador.url}</a></p></div>`;
+        return `<li class="list-group-item">${marcador.titulo} - <a href="${marcador.url}">${marcador.url}</a></li>`;
     }
 
     visualizarMarcadores(){
         let marcadores = this.obtenerMarcadores();
         let html = marcadores.map(this.generarHtmlMarcador).join('');
 
-        this.marcadores.innerHTML = html;
+        this.marcadores.innerHTML = `<ul class="list-group">${html}</ul>`;
     }
 
 
     reportarError(error, url){
+        this.mensajeError.classList.remove('invisible')
         this.mensajeError.innerHTML = `Ocurrio un error al intentar acceder a ${url}: ${error}`
         console.log(error)
         setTimeout(()=> {
             this.mensajeError.innerText = null;
+            this.mensajeError.classList.add('invisible')
+
         },5000);
 
     }
