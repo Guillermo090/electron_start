@@ -1,0 +1,14 @@
+{
+  "name": "app02_gestor_personas",
+  "version": "1.0.0",
+  "description": "Gestor de personas",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillermo Royo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.1.2"
+  }
+}
