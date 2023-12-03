@@ -4,15 +4,16 @@
   "description": "Gestor de personas",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "author": "Guillermo Royo",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^27.1.2"
+    "electron": "^27.1.2",
+    "electron-reload": "^2.0.0-alpha.1"
   },
   "dependencies": {
-    "mdb-cli": "^4.3.3",
+    "materialize-css": "^1.0.0",
     "nedb": "^1.8.0"
   }
 }
