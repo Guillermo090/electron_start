@@ -21,64 +21,24 @@
   
  
   <body>
-    <div class="container row p-4 " style="border:1px solid red">
 
-        <div class="card col-6 ">
-            <div class="card-body m">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button type="button" onclick="detectar()" class="btn btn-success" data-mdb-ripple-init>Button</button>
-            </div>
-        </div>
-        <div class="card   col-6">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <button type="button" onclick="detectar()" class="btn btn-primary " data-mdb-ripple-init>Button</button>
-            </div>
-        </div>
+    <div class="container">
+      <div class="row">
+        <form class="border border-light p-5">
+          <p class="h4 mb-4 text-left">Nuevo Registro</p>
 
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-mdb-ripple-init data-mdb-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-mdb-ripple-init>Save changes</button>
-        </div>
+          <input type="text" name="nombres" id="nombres" class="form-control mb-4" placeholder="nombres" required>
+
+          <input type="text" name="apellidos" id="apellidos" class="form-control mb-4" placeholder="apellidos" required>
+
+          <input type="email" name="email" id="email" class="form-control mb-4" placeholder="email" required>
+
+          <button class="btn btn-info btn-block my-4"> Agregar</button>
+
+        </form>
       </div>
     </div>
-  </div>
-
-
-        <div class="dropdown">
-            <button
-              class="btn btn-primary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-mdb-dropdown-init
-              data-mdb-ripple-init
-              aria-expanded="false"
-            >
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-        </div>
-    </div>
+    
 
 
 
