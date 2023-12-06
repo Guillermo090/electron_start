@@ -24,19 +24,39 @@
 
     <div class="container">
       <div class="row">
-        <form class="border border-light p-5">
-          <p class="h4 mb-4 text-left">Nuevo Registro</p>
-
-          <input type="text" name="nombres" id="nombres" class="form-control mb-4" placeholder="nombres" required>
-
-          <input type="text" name="apellidos" id="apellidos" class="form-control mb-4" placeholder="apellidos" required>
-
-          <input type="email" name="email" id="email" class="form-control mb-4" placeholder="email" required>
-
-          <button class="btn btn-info btn-block my-4"> Agregar</button>
-
-        </form>
+        <div class="col">
+          <form class="border border-light p-5" >
+            <p class="h4 mb-4 text-left">Nuevo Registro</p>
+            
+            <input type="text" name="nombres" id="nombres" class="form-control mb-4" placeholder="nombres" required>
+            
+            <input type="text" name="apellidos" id="apellidos" class="form-control mb-4" placeholder="apellidos" required>
+            
+            <input type="email" name="email" id="email" class="form-control mb-4" placeholder="email" required>
+            
+            <button class="btn btn-info btn-block my-4" type="submit"> Agregar</button>
+            
+          </form>
+        </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <p class="h4 mb-4 text-left">Registros</p>
+          <table id="tablePreview" class="table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+              </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div>
     
 
