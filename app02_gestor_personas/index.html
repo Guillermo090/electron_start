@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <form class="border border-light p-5" >
+          <form id="form_nuevo_registro" class="border border-light p-5" >
             <p class="h4 mb-4 text-left">Nuevo Registro</p>
             
             <input type="text" name="nombres" id="nombres" class="form-control mb-4" placeholder="nombres" required>
@@ -34,12 +34,12 @@
             
             <input type="email" name="email" id="email" class="form-control mb-4" placeholder="email" required>
             
-            <button class="btn btn-info btn-block my-4" type="submit"> Agregar</button>
+            <button id="btn_crear_registro" class="btn btn-success btn-block my-4" type="submit"> Agregar</button>
             
           </form>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col">
           <p class="h4 mb-4 text-left">Registros</p>
           <table id="tablePreview" class="table">
@@ -48,9 +48,11 @@
                 <th>#</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Acciones</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="registros">
                
             </tbody>
           </table>
