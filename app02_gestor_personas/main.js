@@ -1,5 +1,5 @@
 
-const {app, BrowserWindow, Menu} = require('electron');
+const {app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 const electronReload = require('electron-reload');
 
@@ -24,7 +24,7 @@ let menuAplicacionPlantilla = [
 function crearVentanaPrincipal() {
     let ventanaPrincipal = new BrowserWindow({
         width:800,
-        height:600,
+        height:800,
         webPreferences: {
             nodeIntegration: true,
             enableRemoteModule: true,
@@ -40,6 +40,11 @@ function crearVentanaPrincipal() {
     ventanaPrincipal.on('closed', () => {
         ventanaPrincipal = null ;
     });
+
+    ipcMain.on('toggleDevTools', () => {
+        ventanaPrincipal.webContents.toggleDevTools();
+    });
+
 
 } 
 
