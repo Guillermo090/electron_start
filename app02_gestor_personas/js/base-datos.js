@@ -1,6 +1,6 @@
 var Datastore = require('nedb');
 
-let db = new Datastore({filename: 'db/personas.db', autoload: true})
+let db = new Datastore({filename: 'db/personas.db',autoload:true})
 
 exports.agregarPersona = function(nombres, apellidos, correo){
     var persona = {

@@ -3,7 +3,7 @@ const {app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
 const electronReload = require('electron-reload');
 
-electronReload(__dirname);
+// electronReload(__dirname);
 
 let ventanaPrincipal;
 
