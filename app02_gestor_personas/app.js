@@ -47,7 +47,7 @@ class GestorPersonas {
             <td>${persona.correo}</td>
             <td>
                 <input type="button" class="btn btn-danger" value="Eliminar"
-                onclick="${ () => gestorPersonas.eliminarRegistroPersona(persona._id)}">
+                onclick="gestorPersonas.eliminarRegistroPersona('${ persona._id}')">
             </td>
         </tr>
         `;
