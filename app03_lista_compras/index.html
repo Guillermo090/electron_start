@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1 class="mx-5 my-2 text-center">Marcadores</h1>
-    
-    <div id="mensaje-error" class="mx-5 alert alert-warning invisible"></div>
 
-    <section class="creacion-marcador">
-        <form class="creacion-marcador-formulario row  ">
-            <div class=" col-4 offset-3  ">
-                <label for="url-marcador" class="visually-hidden  my-2">Ingrese Marcador</label>
-                <input type="text" class="creacion-marcador-url form-control" placeholder="URL" id="url-marcador" required>
+
+    <div class="ontainer-fluid">
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="page-heaer text-center">
+                    <h1> Lista de Compras </h1>
+                </div>
             </div>
-            <div class="col-auto">
-                <input type="submit" value="Crear" class="btn btn-success mb-3 creacion-marcador-boton" disabled>
-                <!-- <button type="submit" class="btn btn-primary mb-3">Confirm identity</button> -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="list-group">
+                <!-- <div class="list-group-item">
+                    List Header
+                </div> -->
             </div>
-        </form>
-    </section>
+        </div>
+    </div>
 
-    <section class="marcadores mx-5"></section>
 
-    <section class="controles mt-3 mx-4">
-        <button class="btn btn-danger remover-marcadores">Eliminar Marcadores</button>
-    </section>
-
-    <script src="./renderer.js" ></script>
+     <!--js  -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
