@@ -1,7 +1,7 @@
-const {ipcRenderer} = require('electron');
+const { ipcRenderer } = require('electron');
 
 ipcRenderer.on('producto:agregar', function(evento,nombreProducto){
-    localStorage.setItem(producto,nombreProducto);
+    localStorage.setItem(nombreProducto,nombreProducto);
     // let nuevoProductoHtml = `<div class='list-group-item"> ${producto} </div>`;
 
     // let listaCompras = document.getElementById('listaCompras');
