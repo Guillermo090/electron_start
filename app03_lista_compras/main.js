@@ -1,5 +1,8 @@
 
 const {app, BrowserWindow, Menu, ipcMain} = require('electron');
+const electronReload = require('electron-reload');
+
+electronReload(__dirname);
 
 let ventanaPrincipal;
 let ventanaNuevoProducto;
@@ -40,6 +43,8 @@ function crearVentanaAgregarProducto() {
         title: 'Agregar producto',
         webPreferences: {
             nodeIntegration: true,
+            enableRemoteModule: true,
+            contextIsolation: false,
         }
     });
 
@@ -48,6 +53,11 @@ function crearVentanaAgregarProducto() {
     ventanaNuevoProducto.on('close', function() {
         ventanaNuevoProducto= null;
     });
+
+    // ipcMain.on('toggleDevTools', () => {
+    //     ventanaNuevoProducto.webContents.toggleDevTools();
+    // });
+
 };
 
 
@@ -67,12 +77,19 @@ function crearVentanaPrincipal() {
     let menuPrincipal = Menu.buildFromTemplate(menuPrincipalPlantilla);
     ventanaPrincipal.setMenu(menuPrincipal);
 
+    ipcMain.on('toggleDevTools', () => {
+        ventanaPrincipal.webContents.toggleDevTools();
+    });
+
+  
+
 }
 
 app.whenReady().then(crearVentanaPrincipal);
 
 ipcMain.on('producto:agregar', function(evento, nombreProducto) {
-    ventanaPrincipal.webPreferences.send('producto:agregar', nombreProducto);
+    console.log(nombreProducto)
+    ventanaPrincipal.webContents.send('producto:agregar', nombreProducto);
 });
 
 app.on('window-all-closed', function (){
