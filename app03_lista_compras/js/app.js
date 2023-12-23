@@ -12,3 +12,9 @@ function cargarListaProducto(){
     let html = Object.keys(localStorage).map( item => `<div class='list-group-item"> ${localStorage.getItem(item)} </div>`).join('');
     document.getElementById('listaCompras').innerHTML = html;
 }
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'F12'){
+        ipcRenderer.send('toggleDevTools');
+    }
+})
