@@ -54,10 +54,6 @@ function crearVentanaAgregarProducto() {
         ventanaNuevoProducto= null;
     });
 
-    // ipcMain.on('toggleDevTools', () => {
-    //     ventanaNuevoProducto.webContents.toggleDevTools();
-    // });
-
 };
 
 
@@ -81,16 +77,13 @@ function crearVentanaPrincipal() {
         ventanaPrincipal.webContents.toggleDevTools();
     });
 
-  
-
+    ipcMain.on('producto:agregar', function(evento, nombreProducto) {
+        console.log(nombreProducto)
+        ventanaPrincipal.webContents.send('producto:agregar', nombreProducto);
+    });
 }
 
 app.whenReady().then(crearVentanaPrincipal);
-
-ipcMain.on('producto:agregar', function(evento, nombreProducto) {
-    console.log(nombreProducto)
-    ventanaPrincipal.webContents.send('producto:agregar', nombreProducto);
-});
 
 app.on('window-all-closed', function (){
     if (process.platform !== 'darwin'){
